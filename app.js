@@ -6,6 +6,8 @@ var logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const flash = require("connect-flash");
+const cors = require("cors");
+
 // import Mongoose
 const mongoose = require("mongoose");
 mongoose.connect(
@@ -51,6 +53,7 @@ app.use(
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use(cors());
 // admin
 app.use("/admin", adminRouter);
 app.use("/api/v1/member", apiRouter);
