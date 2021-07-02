@@ -33,7 +33,7 @@ describe("API ENDPOINT TESTING", () => {
   it("GET Detail Page", (done) => {
     chai
       .request(app)
-      .get("/api/v1/member/detail-page/5e96cbe292b97300fc902233")
+      .get("/api/v1/member/detail-page/5e96cbe292b97300fc902223")
       .end((err, res) => {
         expect(err).to.be.null;
         expect(res).to.have.status(200);
